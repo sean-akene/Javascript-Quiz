@@ -64,7 +64,7 @@ body {
 outline: 0;
 }
 
-.timer{
+#timerSet{
   text-align: center;  
   font-family: monospace;
   font-size: 70px;

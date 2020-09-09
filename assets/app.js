@@ -19,17 +19,9 @@ function populate(){
            guess("btn" + i, choices[i] );
        }
       
+       showProgress();
     }
-   function timer001() {
-       c = c - 1;
-       if (c < 30){
-           clock001.innerHTML = C;
-       }
-       if (C < 1) {
-           window.clearInterval(update);
-       }
-   }
-update = setInterval(timer001(), 1000);
+   
 
 };
 
@@ -63,16 +55,31 @@ var questions = [
     new Question ("What kind of javascript data is usually enclosed with quotes?", ["String","Function", "Variable", "Array"], "String"),
     new Question ("How do you write an increment in javascript",[">", "+-", "++", "--"],"++")
 ];
-var a = 0
-a++;
-var b = 0;
-b++;
-var c = 30
+var c = 10;
 
 
 //create quiz
 var quiz = new Quiz (questions);
 
+//Timer Function
+function timer001() {
+    
+    c = c - 1;
+    if (c < 10){
+    timerSet.innerHTML = c;
+        //document.getElementById("timerSet") === c;
+  
+    }
+    if (c < 1) {
+        window.clearInterval(update);
+        showScores() 
+        alert("Your time is up!")
+    }
+    
+}
+update = setInterval(timer001, 1000); 
+
+
+
 //display quiz
 populate();
-
