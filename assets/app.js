@@ -1,3 +1,7 @@
+//Initials Prompt 
+var name = prompt("What are your initials?")
+
+//Function to populate the question
 function populate(){
     if (quiz.isEnded() ){
         showScores();
@@ -15,9 +19,17 @@ function populate(){
            guess("btn" + i, choices[i] );
        }
       
-       showProgress ();
     }
-
+   function timer001() {
+       c = c - 1;
+       if (c < 30){
+           clock001.innerHTML = C;
+       }
+       if (C < 1) {
+           window.clearInterval(update);
+       }
+   }
+update = setInterval(timer001(), 1000);
 
 };
 
@@ -32,24 +44,31 @@ function guess(id, guess){
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById("progress");
-    element.innerHTML = "Question" + currentQuestionNumber + "of" + quiz.questions.length; 
+    element.innerHTML = "Question " + currentQuestionNumber + "of " + quiz.questions.length; 
 }
 
 function showScores() {
     var gameOverHtml = "<h1>Results</h1>";
-        gameOverHtml += "<h2 id = 'score'> your scores:" + quiz.score + "</h2>";
+        gameOverHtml +="<h2 id = 'initial'>" + name + "</h2>"
+        gameOverHtml += "<h2 id = 'score'> your score is: " + quiz.score + "</h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml
     
     
 }
-
+//Array of Questions and Answer Choices
 var questions = [
     new Question("What does the M in HTML Stand for?", ["Markdown","Markset","Markup","Market"], "Markup"),
-    new Question ("Which is not a language used for Web Apps?"["Java", "Javascript", "VS Code", "Python"], "VS Code"),
-    new Question ("What kind of javascript data is usually enclosed with quotes?" ["String","Function", "Variable", "Array"], "String"),
-    new Question ("How do you write an increment in javascript"[">", "+-", "++", "--"],"++")
+    new Question ("Which is not a language used for Web Apps?",["Java", "Javascript", "VS Code", "Python"], "VS Code"),
+    new Question ("What kind of javascript data is usually enclosed with quotes?", ["String","Function", "Variable", "Array"], "String"),
+    new Question ("How do you write an increment in javascript",[">", "+-", "++", "--"],"++")
 ];
+var a = 0
+a++;
+var b = 0;
+b++;
+var c = 30
+
 
 //create quiz
 var quiz = new Quiz (questions);
