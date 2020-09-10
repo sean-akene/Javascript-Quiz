@@ -1,5 +1,5 @@
 //Initials Prompt 
-var name = prompt("What are your initials?")
+var name = prompt("What are your initials? (The quiz will begin once you click okay)")
 
 //Function to populate the question
 function populate(){
@@ -53,9 +53,12 @@ var questions = [
     new Question("What does the M in HTML Stand for?", ["Markdown","Markset","Markup","Market"], "Markup"),
     new Question ("Which is not a language used for Web Apps?",["Java", "Javascript", "VS Code", "Python"], "VS Code"),
     new Question ("What kind of javascript data is usually enclosed with quotes?", ["String","Function", "Variable", "Array"], "String"),
-    new Question ("How do you write an increment in javascript",[">", "+-", "++", "--"],"++")
+    new Question ("How do you write an increment in javascrip?t",[">", "+-", "++", "--"],"++"),
+    new Question ("How do you write a decrement in Javascript?",[">", "+-", "++", "--"],"--"),
+    new Question ("What is the proper way to write syntax for a function?",["Camel Case","Lowercase", "Uppercase", "Cattle Case"], "Camel Case")
+
 ];
-var c = 10;
+var c = 30;
 
 
 //create quiz
@@ -65,9 +68,8 @@ var quiz = new Quiz (questions);
 function timer001() {
     
     c = c - 1;
-    if (c < 10){
+    if (c < 30){
     timerSet.innerHTML = c;
-        //document.getElementById("timerSet") === c;
   
     }
     if (c < 1) {

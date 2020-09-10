@@ -1,5 +1,5 @@
 
-// 3 Question Attributes 
+// 3 Main question attributes 
 function Question(text, choices, answer) {
     this.text = text;
     this.choices = choices;
