@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -16,19 +17,24 @@
             <h1>Javascript Quiz</h1>
             <hr style="margin-bottom: 20px">
 
-            <p id="question"></p>
+            <p id="questions"></p>
              
             <!--Answer Buttons-->
-            <div class="buttons">
-                <button id="btn0"> <span id="choice0"></span></button>
-                <button id="btn1"> <span id="choice1"></span></button>
-                <button id="btn2"> <span id="choice2"></span></button>
-                <button id="btn3"> <span id="choice3"></span></button>
+            <div id="buttons">
+                <!-- <button class="btnX"> <span id="choice0"></span></button>
+                <button class="btnX"> <span id="choice1"></span></button>
+                <button class="btnX"> <span id="choice2"></span></button>
+                <button class="btnX"> <span id="choice3"></span></button> -->
             </div>
             <br>
+            <div>
+                <button id="btnS"> Start</button>
+                <button id="btnN"> Next</button>
+            </div>
+        
             <hr style="margin-top: 50px">
             <!--Timer Section-->
-            <section id="timerSet">
+            <section id="alertSet">
                 30
             </section>
             
@@ -41,10 +47,10 @@
     </div>
 
   
-    <!--Javascript file links -->
-    <script src="assets/quiz-controller.js"></script>
-    <script src="assets/questions.js"></script>
-    <script src="assets/app.js"></script>
+   
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>

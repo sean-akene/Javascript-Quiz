@@ -34,20 +34,18 @@ body {
   font-size: 30px;
 }
 
-.grid #question {
+.grid #questions {
   font-family: "monospace";
   font-size: 30px;
   color: #57636e;
 }
 
-.buttons {
+#buttons {
   margin-top: 30px;
 }
 
-#btn0,
-#btn1,
-#btn2,
-#btn3 {
+
+.btnX {
   background-color: #0070bb;
   width: 250px;
   font-size: 20px;
@@ -58,26 +56,44 @@ body {
   padding: 10px 10px;
 }
 
-#btn0:hover,
-#btn1:hover,
-#btn2:hover,
-#btn3:hover {
+.btn{
+  background-color: #0070bb;
+  width: 250px;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #1d3c6a;
+  border-radius: 50px;
+  margin: 10px 40px 10px 0px;
+  padding: 10px 10px;
+}
+
+
+
+.btnX:hover {
   cursor: pointer;
   background-color: #57636e;
 }
 
-#btn0:focus,
-#btn1:focus,
-#btn2:focus,
-#btn3:focus {
-  outline: 0;
+#btnS,
+#btnN{
+  color: white;
+  background-color: #0070bb;
+  border: 1px solid #1d3c6a;
 }
 
-#timerSet {
+#btnS:hover,
+#btnN:hover{
+  cursor: pointer;
+  background-color: #57636e;
+}
+
+
+#alertSet {
   text-align: center;
   font-family: monospace;
   font-size: 70px;
   color: #57636e;
+  
 }
 
 #progress {
